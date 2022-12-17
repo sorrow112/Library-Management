@@ -5,6 +5,9 @@ adherent* create_adh(char* id){
 	int choix;
 	char temp[20];
 	adherent *p = (adherent*)malloc(sizeof(adherent));
+		if(!p){
+		return NULL;
+	}
 	printf("l'ajout d'un edherant");
 	printf("\ndonnez le nom de l'adherant");
 	while(!scanf(" %[a-zA-Z]",temp)){
@@ -55,22 +58,64 @@ adherent* create_adh(char* id){
 
 adh_node* create_adh_node(char* id){
 	adherent *adh = create_adh(id);
+	if(!adh){
+		return NULL;
+	}	
 	adh_node *node = (adh_node*)malloc(sizeof(adh_node));
+	if(!node){
+		return NULL;
+	}
 	node->adh = adh;
 	node->suivant = NULL;
 	return node;
+}
+adh_list* create_adh_list(){
+	adh_list* list = malloc(sizeof(adh_list*));
+	if (!list) {
+   		return NULL;
+  	}
+  	list->debut = NULL;
+  	return list;
 }
 
 
 
  //takes a list and an element
-void push_into_adh_list(adh_node* head, adh_node* newNode){
-	newNode->suivant = head;
-	head->suivant = newNode;
+int push_adh(adh_list* head, char* id){
+	adh_node* p = create_adh_node(id);
+	adh_node* temp = head->debut;
+	
+	if(!p){
+		return -1;
+	}
+
+	if(head->debut == NULL){
+		head->debut = p;
+		
+	}
+	else{
+		while(temp->suivant!=NULL){
+			temp = temp->suivant;
+		}
+	temp->suivant = p;
+	}
+	return 1;
+	
 }
+/*
+void push_into_adh_list(adh_list* head, adh_node* newNode){
+	if(head->debut != NULL){
+		newNode->suivant = head->debut;
+		head->debut = newNode;
+	}
+	else{
+		head->debut = newNode;
+	}
+	
+}*/
 //TODO: make this work properly
-void afficher_adh(adh_node* head){
-	adh_node* temp = head;
+void afficher_adh(adh_list* head){
+	adh_node* temp = head->debut;
 	printf("\n\n");
 	
 	if(temp == NULL){

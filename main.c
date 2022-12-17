@@ -11,14 +11,12 @@
 
 
 int main(int argc, char *argv[]) {
-	adh_node* *p1 = create_adh_node("0");
-	adh_node* *p2 = create_adh_node("0");
-	adh_node* *p3 = create_adh_node("0");
-	push_into_adh_list(&p1,&p2);
-	push_into_adh_list(&p2,&p3);
-	//todo: make a list struct and make this test work
+	adh_list* l_adh = create_adh_list();
+	push_adh(l_adh, "0");
+	push_adh(l_adh, "0");
+	push_adh(l_adh, "0");
 
-	afficher_adh(p1);
+	afficher_adh(l_adh);
 
 	return 0;
 }

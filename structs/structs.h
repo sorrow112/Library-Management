@@ -15,6 +15,9 @@ typedef struct adh_node{
 	struct adh_node* suivant;
 }adh_node;
 
+typedef struct adh_list{
+	adh_node* debut;
+}adh_list;
 
 //docs
 typedef struct document{
@@ -48,6 +51,10 @@ typedef struct doc_node{
 	struct doc_node* suivant;
 }doc_node;
 
+typedef struct doc_list{
+	doc_node* debut;
+}doc_list;
+
 //empruntes
 typedef struct{
 	char id[10];
@@ -62,7 +69,9 @@ typedef struct emp_node{
 	emprunt* emp;
 	struct emp_node* suivant;
 }emp_node;
-
+typedef struct emp_list{
+	emp_node* debut;
+}emp_list;
 typedef struct date{
 	int dd;
 	int mm;
