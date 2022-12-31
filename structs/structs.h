@@ -1,4 +1,8 @@
-
+typedef struct date{
+	int dd;
+	int mm;
+	int yy;
+}date;
 //adherants
 typedef struct{
 	char id[10];
@@ -7,6 +11,7 @@ typedef struct{
 	char adresse[20];
 	char type[11];
 	int retard;
+	int nbr_encours;
 	//emp_node* l_emps; na7ineha car bech tkoun kima DB , kol 7aja fi fichier mte3ha , bech ki na3mel save leldata menal9ach mochkol
 }adherent;
 
@@ -26,25 +31,48 @@ typedef struct document{
 	char type[20];
 	int nbr_exemplaires;
 	int location;
-	int nbr_emps;
-	//char categorie[20];
+
 }doc;
 
 typedef struct article{
-	char code_doc[10];
+	doc* doc;
 	char auteur[20];
-	char date_pub[11];
+	date* date_pub;
 }article;
 typedef struct livre{
-	char code_doc[10];
+	doc* doc;
 	char auteur[20];
 	char editeur[20];
-	char date_edition[11];
+	date* date_edit;
 }livre;
 typedef struct magazine{
-	char code_doc[10];
+	doc* doc;
 	int frequence; //par semaine
 }magazine;
+
+typedef struct article_node{
+	article* doc;
+	struct article_node* suivant;
+}art_node;
+typedef struct livre_node{
+	livre* doc;
+	struct livre_node* suivant;
+}liv_node;
+typedef struct magazine_node{
+	magazine* doc;
+	struct magazine_node* suivant;
+}mag_node;
+
+typedef struct article_list{
+	art_node* debut;
+}art_list;
+typedef struct livre_list{
+	liv_node* debut;
+}liv_list;
+typedef struct magazine_list{
+	mag_node* debut;
+}mag_list;
+
 
 typedef struct doc_node{
 	doc* doc;
@@ -60,20 +88,17 @@ typedef struct{
 	char id[10];
 	char id_adh[10];
 	char doc[20];
-	char dateDebut[11];
-	char delaiLimite[11];
+	date* dateDebut;
+	date* delaiLimite;
 	int returned;
-}emprunt;
+	int depasse;
+}emprunte;
 
 typedef struct emp_node{
-	emprunt* emp;
+	emprunte* emp;
 	struct emp_node* suivant;
 }emp_node;
 typedef struct emp_list{
 	emp_node* debut;
 }emp_list;
-typedef struct date{
-	int dd;
-	int mm;
-	int yy;
-}date;
+

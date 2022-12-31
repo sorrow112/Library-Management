@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o structs/doc.o structs/emps.o structs/personnes.o
-LINKOBJ  = main.o structs/doc.o structs/emps.o structs/personnes.o
+OBJ      = main.o structs/doc.o structs/emps.o structs/personnes.o structs/articles.o structs/magazines.o structs/livres.o structs/date.o saveload.o
+LINKOBJ  = main.o structs/doc.o structs/emps.o structs/personnes.o structs/articles.o structs/magazines.o structs/livres.o structs/date.o saveload.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -35,3 +35,18 @@ structs/emps.o: structs/emps.c
 
 structs/personnes.o: structs/personnes.c
 	$(CC) -c structs/personnes.c -o structs/personnes.o $(CFLAGS)
+
+structs/articles.o: structs/articles.c
+	$(CC) -c structs/articles.c -o structs/articles.o $(CFLAGS)
+
+structs/magazines.o: structs/magazines.c
+	$(CC) -c structs/magazines.c -o structs/magazines.o $(CFLAGS)
+
+structs/livres.o: structs/livres.c
+	$(CC) -c structs/livres.c -o structs/livres.o $(CFLAGS)
+
+structs/date.o: structs/date.c
+	$(CC) -c structs/date.c -o structs/date.o $(CFLAGS)
+
+saveload.o: saveload.c
+	$(CC) -c saveload.c -o saveload.o $(CFLAGS)
