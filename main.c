@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
     	printf("\n\t\t\t  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
     	printf("\n\t\t\t  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
     	while(leave==0){
-    		    	menu_principale();
+    	menu_principale();
 		}
 
 	saver_all();
@@ -80,7 +80,7 @@ void menu_gerer_adh(){
 	printf("\n");
 	do{
 		fflush(stdin);
-	printf("\n\t\t\t\t MENU\n\t\t\t\t ______________________________________________");
+	printf("\n\t\t\t\t GERER ADHERENTS\n\t\t\t\t ______________________________________________________________");
     printf("\n\t\t\t\t| [1] AJOUTER ADHERENT                                        |");
     printf("\n\t\t\t\t| ____________________________________________________________|");
     printf("\n\t\t\t\t| [2] SUPPRIMER ADHERENT                                      |");
@@ -159,7 +159,7 @@ void menu_gerer_docs(){
 	printf("\n");
 	do{
 		fflush(stdin);
-	printf("\n\t\t\t\t MENU\n\t\t\t\t ______________________________________________");
+	printf("\n\t\t\t\t GERER DOCUMENTS\n\t\t\t\t ______________________________________________________________");
     printf("\n\t\t\t\t| [1] AJOUTER UND DOCUMENT                                    |");
     printf("\n\t\t\t\t| ____________________________________________________________|");
     printf("\n\t\t\t\t| [2] SUPPRIMER UN DOCUMENT                                   |");
@@ -207,7 +207,7 @@ void menu_aff_document(){
 	printf("\n");
 	do{
 		fflush(stdin);
-	printf("\n\t\t\t\t MENU\n\t\t\t\t ______________________________________________");
+	printf("\n\t\t\t\t AFFICHER DOCUMENTS\n\t\t\t\t ______________________________________________________________");
     printf("\n\t\t\t\t| [1] AFFICHER UN ARTICLE                                     |");
     printf("\n\t\t\t\t| ____________________________________________________________|");
     printf("\n\t\t\t\t| [2] AFFICHER UN LIVRE                                       |");
@@ -242,15 +242,15 @@ void menu_ajout_document(){
 	printf("\n");
 	do{
 		fflush(stdin);
-	printf("\n\t\t\t\t MENU\n\t\t\t\t ______________________________________________");
+	printf("\n\t\t\t\t AJOUTER DOCUMENTS\n\t\t\t\t ________________________________________________________________");
     printf("\n\t\t\t\t| [1] AJOUTER UN ARTICLE                                        |");
-    printf("\n\t\t\t\t| ____________________________________________________________|");
-    printf("\n\t\t\t\t| [2] AJOUTER UN LIVRE                                      |");
-    printf("\n\t\t\t\t| ____________________________________________________________|");
-    printf("\n\t\t\t\t| [3] AJOUTER UNE MAGAZINE                                       |");
-    printf("\n\t\t\t\t| ____________________________________________________________|");
-    printf("\n\t\t\t\t| [4] RETOURNER AU MENU PRINCIPAL                             |");
-    printf("\n\t\t\t\t|_____________________________________________________________|\n");
+    printf("\n\t\t\t\t| ______________________________________________________________|");
+    printf("\n\t\t\t\t| [2] AJOUTER UN LIVRE                                          |");
+    printf("\n\t\t\t\t| ______________________________________________________________|");
+    printf("\n\t\t\t\t| [3] AJOUTER UNE MAGAZINE                                      |");
+    printf("\n\t\t\t\t| ______________________________________________________________|");
+    printf("\n\t\t\t\t| [4] RETOURNER AU MENU PRINCIPAL                               |");
+    printf("\n\t\t\t\t|_______________________________________________________________|\n");
 	}while(!scanf("%d",&choice)||choice<1||choice>4);
     switch(choice){
     	case 1:{
@@ -278,7 +278,7 @@ void menu_sup_document(){
 	printf("\n");
 	do{
 		fflush(stdin);
-	printf("\n\t\t\t\t MENU\n\t\t\t\t ______________________________________________");
+	printf("\n\t\t\t\t SUPPRIMER DOCUMENTS\n\t\t\t\t ____________________________________________________________");
     printf("\n\t\t\t\t| [1] SUPPRIMER UN ARTICLE                                    |");
     printf("\n\t\t\t\t| ____________________________________________________________|");
     printf("\n\t\t\t\t| [2] SUPPRIMER UN LIVRE                                      |");
@@ -357,7 +357,7 @@ void menu_rech_document(){
 	printf("\n");
 	do{
 		fflush(stdin);
-	printf("\n\t\t\t\t MENU\n\t\t\t\t ______________________________________________");
+	printf("\n\t\t\t\t RECHERCHER DOCUMENTS\n\t\t\t\t ____________________________________________________________");
     printf("\n\t\t\t\t| [1] RECHERCHER UN ARTICLE PAR CODE                          |");
     printf("\n\t\t\t\t| ____________________________________________________________|");
     printf("\n\t\t\t\t| [2] RECHERCHER UN ARTICLE PAR AUTEUR                        |");
@@ -451,7 +451,7 @@ void menu_gerer_emps(){
 	char inp[10];
 	printf("\n");
 	do{
-		printf("\n\t\t\t\t MENU\n\t\t\t\t ______________________________________________");
+		printf("\n\t\t\t\t GERER EMPTUNTES\n\t\t\t\t ___________________________________________________________");
     printf("\n\t\t\t\t| [1] AFFICHER LES EMPRUNTES                                 |");
     printf("\n\t\t\t\t| ___________________________________________________________|");
     printf("\n\t\t\t\t| [2] EMPRUNTER                                              |");
@@ -499,7 +499,7 @@ int menu_principale(){
 	printf("\n");
 	do{
 		fflush(stdin);
-	printf("\n\t\t\t\t MENU\n\t\t\t\t ______________________________________________");
+	printf("\n\t\t\t\t MENU\n\t\t\t\t ___________________________________________________________");
     printf("\n\t\t\t\t| [1] GERER MES ADHERENT                                     |");
     printf("\n\t\t\t\t| ___________________________________________________________|");
     printf("\n\t\t\t\t| [2] GERER LES DOCUMENT                                     |");

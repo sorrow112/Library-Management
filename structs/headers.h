@@ -21,9 +21,7 @@ void afficher_adh();
 adherent* recherche_adh(char* id);
 void afficher_un_adh(adherent* adh);
 int supprimer_adh(char* id);
-int nbr_emps_par_adh_ec();//nbr emps en cours
-int nbr_emps_par_adh_tt();//nbr emps total
-int nbr_emps_par_adh_ec();//nbr emps dépassées
+
 int saver_adhs();
 int loader_adh();
 int recherche_adh_nom(char* nom);

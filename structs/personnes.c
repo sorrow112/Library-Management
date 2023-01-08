@@ -293,13 +293,14 @@ int supprimer_adh(char* id){
 		return 1;
 	}
 	if(temp->suivant==NULL){
-		printf("adh introuvable :(");
+		printf("adh introuvable");
 		return -1;
 	}
 	adh_node* pr = temp;
 	temp = temp->suivant;
-	while(temp->suivant!=NULL){
+	while(temp!=NULL){
 		if(strcmp(temp->adh->id,id)==0){
+			
 			pr->suivant = temp->suivant;
 			free(temp);
 		return 1;
@@ -307,6 +308,7 @@ int supprimer_adh(char* id){
 		pr = temp;
 		temp = temp->suivant;
 	}
+	
 	printf("adh introuvable :(");
 	return -1;
 }

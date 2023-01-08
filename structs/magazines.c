@@ -212,7 +212,7 @@ int supprimer_mag(char* code){
 	mag_node* pr = temp;
 	temp = temp->suivant;
 
-	while(temp->suivant!=NULL){
+	while(temp!=NULL){
 		if(strcmp(temp->doc->doc->code,code)==0){
 			pr->suivant = temp->suivant;
 			free(temp);
