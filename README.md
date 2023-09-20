@@ -1,6 +1,6 @@
 # Library Management Application
 
-This is a library management application that i prepared for my C programming evaluation in university. This system runs on the console and gives you access to most the functionalities needed to manage your own library
+This is a library management application that i prepared for my C programming evaluation in university. This system runs on the console and gives you access to most the functionalities needed to manage your own library.
 
 ## Features
 
@@ -10,9 +10,19 @@ This is a library management application that i prepared for my C programming ev
 
 - **Borrowing and Returning:** Members can borrow items from the library, and the application keeps track of due dates and overdue items. Members can also return items. The app also handles penelizing past due returns.
 
+- **Data storage** This application saves the data that you have submitted while using it and you can load it the next time you open it.
+
 ## Usage
 
 - download the zip containing the app and run it using any ide that has a C compiler (devC++ ,code blocks or Clion recommanded)
+
+## What can be improved
+
+- better graphic interface
+
+- saving data in csv files or a database instead of text files
+
+- a better authentication system that supports multiple staff members rather than a single account for the librarian
 
 ## Contact me
 
